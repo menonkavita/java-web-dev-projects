@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 
 public class CountCharacters {
@@ -20,23 +22,28 @@ public class CountCharacters {
 
         HashMap<Character, Integer> charactersHashList = new HashMap<>();
 
+        // Bonus Mission #1: Getting input from user.
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter a string or phrase.");                        // B.M #1 : -- getting string from user.
         String strPhrase= input.nextLine();
+        input.close();
 
 
-//        strPhrase = strPhrase.replaceAll("[^A-Za-z]", "");                           // B.M #3 : -- excluding all non-alphabetic characters.
+//       strPhrase = strPhrase.replaceAll("[^A-Za-z]", "");                           // B.M #3 : -- excluding all non-alphabetic characters.
 
         char[] charactersInString = strPhrase.toCharArray();
 //        char[] charactersInString = strPhrase.toLowerCase().toCharArray();           // B.M #2 : -- to make the count case in-sensitive.
+        System.out.println(charactersInString);
 
         for (char c : charactersInString) {
 //            System.out.println(c);
 
+            // -- Works
             if (charactersHashList.containsKey(c)) {
+//            if (Character.isLetter(c)) {                                  // saves only alphabets into the HashMap; Null Pointer Exception
                 charactersHashList.put(c, charactersHashList.get(c) + 1);
             } else {
-                charactersHashList.put(c, 1);
+                    charactersHashList.put(c, 1);
             }
         }
 
