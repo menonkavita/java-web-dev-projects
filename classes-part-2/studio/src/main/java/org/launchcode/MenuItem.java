@@ -74,7 +74,7 @@ public class MenuItem {
     @Override
     public String toString(){
         String text = isNew ? " - New\n" : "\n";
-        return itemName + text + description + "\n$" + price + "\n" + category + "\n";
+        return itemName + text + description + "\n$" + price + "\n" ;
     }
 
     // equals()

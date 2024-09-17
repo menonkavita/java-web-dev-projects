@@ -1,14 +1,8 @@
 package org.launchcode;
-import org.launchcode.MenuItem;
-import org.launchcode.Menu;
 
-import java.sql.SQLOutput;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import org.launchcode.MenuItem;
-import org.launchcode.Menu;
 
-public class Main {
+public class Restaurant {
 
     public static void main(String[] args) {
         MenuItem menuApp1 = new MenuItem("Fried Mozzarella sticks","Served with Marinara sauce", "Appetizer", 13.79, false);
@@ -51,9 +45,11 @@ public class Main {
 
         // Menu 2 - Second Menu with just 3 entrees
         ArrayList <MenuItem> menuItemEntree = new ArrayList<>();
+        menuItemEntree.add(menuApp3);
         menuItemEntree.add(menuEnt1);
         menuItemEntree.add(menuEnt2);
         menuItemEntree.add(menuEnt3);
+        menuItemEntree.add(menuDessert1);
         Menu menu2= new Menu(menuItemEntree);
 
 
@@ -70,15 +66,16 @@ public class Main {
 //        System.out.println("\nPrinting Updated menu\n");
 //        System.out.println(menu1);
 
-        System.out.println("\nPrinting Second Menu\n");
+        System.out.println("\n------------ Printing Second Menu ------------ \n");
         System.out.println(menu2);
+        System.out.println("\n------------ End of menu 2 ------------\n");
 
         //Testing equals() in MenuItem class
         if (menuApp1.equals(menuApp2)) {
-            System.out.println("Appetizer 1 & Appetizer 2 are same. Make corrections to menu.");
+            System.out.println("\nAppetizer 1 & Appetizer 2 are same. Make corrections to menu.\n");
         }
         else{
-            System.out.println("No duplicates in Appetizers.");
+            System.out.println("\nNo duplicates in Appetizers. All good.\n");
         }
 
 

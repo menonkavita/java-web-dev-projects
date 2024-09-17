@@ -36,7 +36,7 @@ public class Menu {
         // If a user tries to add an item that is already on the menu, print a message that warns the user about the duplicate.
         // Also, prevent the duplicates from getting added to the menu.
 
-        String message = "\nThis item has already been added to the menu.";
+        String message = "\nThis item has already been added to the menu.\n";
         // Option #1: contains()
         if(menuItems.contains(items)){
             System.out.println("Duplicate item: " + items.getItemName() + message);
