@@ -14,7 +14,7 @@ public class Main {
         car.drive(250);
         carStats(car);
 
-        car.addGas(7.5);
+        car.addGas(9);
         carStats(car);
     }
 
