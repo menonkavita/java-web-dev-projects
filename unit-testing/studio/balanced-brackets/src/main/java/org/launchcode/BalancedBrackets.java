@@ -20,6 +20,12 @@ public class BalancedBrackets {
      * @return true if balanced, false otherwise
      */
     public static boolean hasBalancedBrackets(String str) {
+        // check if there is no text, empty string - ""
+        if (str.isEmpty()) return false;
+
+        // check if there are no square brackets, only text or other brackets - "LaunchCode","{LaunchCode}", "(LaunchCode)"
+        if (!(str.contains("[") || str.contains("]"))) return false;
+
         int brackets = 0;
         for (char ch : str.toCharArray()) {
             if (ch == '[') {
@@ -27,6 +33,8 @@ public class BalancedBrackets {
             } else if (ch == ']') {
                 brackets--;
             }
+
+            if (brackets < 0) return false;
         }
         return brackets == 0;
     }
