@@ -1,9 +1,15 @@
-public class HouseCat extends Cat {
+
+
+public class HouseCat1 extends Cat1 {
     private String name;
     private String species = "Felis catus";
 
-    public HouseCat(String aName, double aWeight) {
+    public HouseCat1(String aName, double aWeight) {
         super(aWeight);
+        name = aName;
+    }
+
+    public HouseCat1(String aName){
         name = aName;
     }
 
@@ -13,7 +19,7 @@ public class HouseCat extends Cat {
 
     @Override
     public String noise() {
-        return "Hello, my name is " + name + "!";
+        return super.noise() + " Hello, my name is " + name + "!";
     }
 
     public String purr() {
