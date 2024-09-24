@@ -70,4 +70,5 @@ public class Quiz {
         }
         input.close();
     }
-}
+
+} // end of Class

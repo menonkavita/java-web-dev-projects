@@ -11,4 +11,5 @@ public class TrueOrFalse extends Question{
         String n = "\n";
         return n + "TRUE OR FALSE: " + n + getQuestion() + n + getFormattedChoices();
     }
+
 }

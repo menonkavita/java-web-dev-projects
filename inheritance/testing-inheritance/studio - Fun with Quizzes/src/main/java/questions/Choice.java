@@ -20,5 +20,4 @@ public class Choice {
     public boolean isCorrect() {
         return correct;
     }
-
 }

@@ -11,4 +11,5 @@ public class MultipleChoice extends Question {
         String newLine = System.lineSeparator();
         return newLine + "Choose ONE: " + newLine + getQuestion() + newLine + getFormattedChoices();
     }
+
 }

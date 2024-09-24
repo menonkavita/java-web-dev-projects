@@ -63,8 +63,6 @@ public class QuizRunner {
         System.out.println(n + "You got " + quiz.getNumCorrect() +
                 " of " + quiz.getQuestions().size() +
                 " questions correct. Hope you enjoyed playing. " + n);
-
-
-
     }
-}
+
+} // end of Class
