@@ -1,16 +1,11 @@
-package org.launchcode.skills_tracker.controllers;
-
-
+package org.launchcode.Studio.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
 
 // Chapter 9 & 10: Spring & Controller Studio
 @Controller
 public class SkillsController {
-
-
-//    @RequestMapping(method= {RequestMethod.GET, RequestMethod.POST}, value="/form")
-// --- Not Working -----
 
     // BONUS MISSION 2: page will be visible at localhost:8080/result
     // earlier visible at localhost:8080/form
@@ -21,7 +16,7 @@ public class SkillsController {
             name = "User ";
         }
 
-       //return "Hello " + name;
+        //return "Hello " + name;
         return displayResults(name, lang1, lang2, lang3);
 
 //        return "<html>" + "<br>" +
@@ -41,6 +36,8 @@ public class SkillsController {
     }
 
     public static String displayResults(String name, String language1, String language2, String language3){
+
+        // Displays results based on ordered list
 //        return "<html>" + "<br>" +
 //                "<body>" + "<br>" +
 //                "<h1>" + "Hi " + name + "<br>" +
@@ -118,6 +115,7 @@ public class SkillsController {
                 "</html>" ;
     }
 
+
     // user form
     // visible @ localhost:8080
     @GetMapping("/")
@@ -138,5 +136,6 @@ public class SkillsController {
                 "</body>" +
                 "</html>" ;
     }
+
 
 }
