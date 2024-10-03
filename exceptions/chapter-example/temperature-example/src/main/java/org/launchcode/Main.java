@@ -2,6 +2,9 @@ package org.launchcode;
 
 import java.util.Scanner;
 
+
+
+// Chapter Example
 public class Main {
     public static void main(String[] args) {
 
