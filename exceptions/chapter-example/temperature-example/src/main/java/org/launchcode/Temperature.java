@@ -1,5 +1,6 @@
 package org.launchcode;
 
+// Chapter Example
 public class Temperature {
     private double fahrenheit;
 
