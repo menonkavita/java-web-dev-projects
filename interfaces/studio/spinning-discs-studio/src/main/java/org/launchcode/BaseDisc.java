@@ -5,10 +5,8 @@ import java.util.ArrayList;
 public abstract class BaseDisc {
     private String ID;
     private String name;
-    private ArrayList<String> fileNames;
     private String discType;
-    private int discCapacity;                // Max space available for storage on disc
-    //private double discSpaceUsed;
+
 
     public BaseDisc(String ID, String name) {
         this.ID = ID;
@@ -19,13 +17,6 @@ public abstract class BaseDisc {
         this.ID = ID;
         this.name = name;
         this.discType = discType;
-    }
-
-    public BaseDisc(String ID, String name, String discType, int discCapacity) {
-        this.ID = ID;
-        this.name = name;
-        this.discType = discType;
-        this.discCapacity = discCapacity;
     }
 
     public void setID(String ID) {
@@ -44,17 +35,6 @@ public abstract class BaseDisc {
         this.discType = discType;
     }
 
-    // getFileNames() used to calculate disc space yet
-    // returns number of files; disc space will be calculated separately for CDs & DVDs in  their classes.
-    // CD - 5 MB, DVD - 10 MB size
-    public ArrayList<String> getFileNames() {
-        return fileNames;
-    }
-
-    public void setFileNames(ArrayList<String> fileNames) {
-        this.fileNames = fileNames;
-    }
-
     public String getName() {
         return name;
     }
@@ -63,12 +43,5 @@ public abstract class BaseDisc {
         this.name = name;
     }
 
-    public int getDiscCapacity() {
-        return discCapacity;
-    }
-
-    public void setDiscCapacity(int discCapacity) {
-        this.discCapacity = discCapacity;
-    }
 
 }

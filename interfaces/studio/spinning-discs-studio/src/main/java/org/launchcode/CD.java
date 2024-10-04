@@ -1,31 +1,21 @@
 package org.launchcode;
 
-public class CD extends BaseDisc implements OpticalDisc {
+public class CD extends DataDisc implements OpticalDisc {
     // TODO: Implement your custom interface.
 
     // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
     //  need to be declared separately.
 
-    private final boolean isMusicCD;
+    private boolean isMusicCD;
 
-    public CD(String ID, String name, boolean isMusicCD) {
-        super(ID, name);
-        this.isMusicCD = isMusicCD;
-    }
 
-    public CD(String ID, String name, String discType, boolean isMusicCD) {
-        super(ID, name, discType);
-        this.isMusicCD = isMusicCD;
+    public CD(String ID, String name, String discType, int discCapacity) {
+        super(ID, name, discType, discCapacity);
     }
 
     public CD(String ID, String name, String discType, int discCapacity, boolean isMusicCD) {
         super(ID, name, discType, discCapacity);
         this.isMusicCD = isMusicCD;
-    }
-
-    @Override
-    public void runFile() {
-        System.out.println("Running the CD to display the files ... ");
     }
 
 
@@ -44,5 +34,18 @@ public class CD extends BaseDisc implements OpticalDisc {
                 "Is a Music CD? " + String.valueOf(isMusicCD ? "yes" : "no") + n +
                 "Max Disc Capacity: " + super.getDiscCapacity()  + " MB" + n +
                 "Space available in CD: " + String.valueOf(super.getDiscCapacity() - calculateCDSpaceUsed()) + " MB";
+    }
+
+
+//    Deleted Method from Interface OpticalDisc that needed to be implemented earlier
+//    @Override
+//    public void runFile() {
+//        System.out.println("Running the CD to display the files ... ");
+//    }
+
+
+    @Override
+    public void spinSpeed() {
+        System.out.println("A CD spins at a rate of 200 - 500 rpm.");
     }
 }

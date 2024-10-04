@@ -1,4 +1,4 @@
-package org.launchcode.skills_tracker;
+package org.launchcode.Studio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

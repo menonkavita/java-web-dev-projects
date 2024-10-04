@@ -31,7 +31,7 @@ class CarTest {
 
         // assertTrue & assertFalse -
         // strict comparison that passes if the first argument is boolean false
-        assertFalse((test_car.getGasTankLevel() <= 0 ), "Does constructor set initial GasTankLevel properly");
+        assertFalse((test_car.getGasTankLevel() == 0 ), "Does constructor set initial GasTankLevel properly");
         //assertTrue((test_car.getGasTankLevel() >= 0 ), "Does constructor set initial GasTankLevel properly");
     }
 

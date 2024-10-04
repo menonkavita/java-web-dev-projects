@@ -15,7 +15,7 @@ public class MilesPerGallon {
 
         double milesPerGallon = miles/gallons;
 
-        System.out.println("Amount of gallons per mile is: " + milesPerGallon + " mpg");
+        System.out.println("Your current mileage is " + milesPerGallon + " mpg (miles per gallon)." );
 
     }
 }

@@ -8,12 +8,16 @@ public class Main {
         // TODO: Declare and initialize a CD and a DVD object.
         CD cdObject = new CD("CD-1", "LC-CD", "Windows OS",  500, true);
         DVD dvdObject = new DVD("DVD-1", "LC-DVD", "Mac OS", 750);
+        FloppyDisc floppyObject = new FloppyDisc("Floppy-1", "First Floppy","Floppy");
+        LP lpObject = new LP("LP-1", "Super Hits", "Vinyl discs", "We are the World", 12);
 
         ArrayList<String> cdArrayList = new ArrayList<>();
         ArrayList<String> dvdArrayList = new ArrayList<>();
+        ArrayList<String> floppyArrayList = new ArrayList<>();
 
         // TODO: Call each CD and DVD method to verify that they work as expected.
-        cdObject.runFile();
+        cdObject.spinSpeed();
+        cdObject.spinDisc();
 
         cdArrayList.add("We are the World.mp3");
         cdArrayList.add("Circle of Life -  Madagascar.mp3");
@@ -31,7 +35,8 @@ public class Main {
 
 
         // DVD part
-        dvdObject.runFile();
+        dvdObject.spinDisc();
+        dvdObject.spinSpeed();
 
         dvdArrayList.add("Black-Beauty.mp4");
         dvdArrayList.add("Pride&Prejudice.mp4");
@@ -48,5 +53,23 @@ public class Main {
             System.out.println(dvdObject.getFileNames().get(i));
         }
 
+        // Floppy Disc
+        floppyArrayList.add("File1.java");
+        floppyArrayList.add("File2.java");
+        floppyArrayList.add("File3.java");
+        floppyArrayList.add("File4.java");
+        floppyArrayList.add("File5.java");
+        floppyObject.setFileNames(floppyArrayList);
+
+        System.out.println("\nFloppy Disc info - ");
+        System.out.println(floppyObject.toString());
+        floppyObject.spinSpeed();
+        floppyObject.spinDisc();
+
+        // LP Discs
+        System.out.println("\nLP Disc info - ");
+        System.out.println(lpObject);
+        lpObject.spinSpeed();
+        lpObject.spinDisc();
     }
 }

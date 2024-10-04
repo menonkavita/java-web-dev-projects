@@ -5,9 +5,11 @@ public interface OpticalDisc {
 
     // Interface methods cannot have body
     default String spinDisc(){
-        return "CDs spins at a rate of 500 RPMs.\nDVDs spin at a rate of 570-1600 RPMs";
+        return "Spinning info - \n" + "CDs spins at a rate of 500 RPMs.\nDVDs spin at a rate of 570-1600 RPMs";
     }
 
-    void runFile();
+    void spinSpeed();
+
+    //void runFile();
 
 }
