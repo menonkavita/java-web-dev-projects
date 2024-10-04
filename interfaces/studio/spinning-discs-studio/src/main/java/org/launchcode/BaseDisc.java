@@ -44,5 +44,4 @@ public abstract class BaseDisc {
 
         return "Data written to disc.  Remaining space = " + remainingCapacity;
     }
-
 }
